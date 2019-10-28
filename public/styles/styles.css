@@ -34,6 +34,11 @@ header {
           flex-direction: column;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  background-color: #FFFFFF;
 }
 
 header .container {
@@ -46,6 +51,18 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
   justify-items: space-between;
+}
+
+@media only screen and (max-width: 1126px) {
+  header .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header .container {
+    width: 100%;
+  }
 }
 
 header .container .topWrapper {
@@ -61,6 +78,12 @@ header .container .topWrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100px;
+}
+
+@media only screen and (max-width: 420px) {
+  header .container .topWrapper {
+    height: 80px;
+  }
 }
 
 header .container .topWrapper .socialMediaIcons {
@@ -98,6 +121,12 @@ header .container .topWrapper .socialMediaIcons .smIcon:hover {
   background-color: #F5524B;
 }
 
+@media only screen and (max-width: 420px) {
+  header .container .topWrapper .socialMediaIcons .smIcon {
+    display: none;
+  }
+}
+
 header .container .topWrapper .logoWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,6 +142,12 @@ header .container .topWrapper .logoWrapper {
 
 header .container .topWrapper .logoWrapper .logo {
   width: 120px;
+}
+
+@media only screen and (max-width: 420px) {
+  header .container .topWrapper .logoWrapper {
+    float: left;
+  }
 }
 
 header .container .topWrapper .liveBtn {
@@ -169,6 +204,18 @@ header .containerBottom .nav {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 1126px) {
+  header .containerBottom .nav {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header .containerBottom .nav {
+    width: 100%;
+  }
+}
+
 header .containerBottom .nav .leftWrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,6 +256,12 @@ header .containerBottom .nav .leftWrap .linksContainer {
           justify-content: center;
 }
 
+@media only screen and (max-width: 420px) {
+  header .containerBottom .nav .leftWrap .linksContainer {
+    display: none;
+  }
+}
+
 header .containerBottom .nav .leftWrap .linksContainer .navLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,6 +300,13 @@ header .containerBottom .nav .rightWrap {
   float: right;
 }
 
+@media only screen and (max-width: 420px) {
+  header .containerBottom .nav .rightWrap {
+    width: 70%;
+    margin-left: 20px;
+  }
+}
+
 header .containerBottom .nav .rightWrap .searchInput input {
   font-size: 15px;
   padding: 5px 10px;
@@ -270,5 +330,60 @@ header .containerBottom .nav .rightWrap .cienRadios .cienradiosLink {
 
 header .containerBottom .nav .rightWrap .cienRadios .cienradiosLink:hover {
   color: #F5524B;
+}
+
+.newsWrapper {
+  margin-top: 25px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 130px;
+}
+
+.newsWrapper .mainWrapper {
+  width: 80%;
+}
+
+@media only screen and (max-width: 1126px) {
+  .newsWrapper .mainWrapper {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .newsWrapper .mainWrapper {
+    width: 100%;
+  }
+}
+
+.newsWrapper .mainWrapper .mainNews .imgAnchor {
+  position: relative;
+}
+
+.newsWrapper .mainWrapper .mainNews .imgAnchor .newsImg {
+  width: 440px;
+  position: relative;
+  margin: 10px;
+}
+
+.newsWrapper .mainWrapper .mainNews .imgAnchor .newsTitle {
+  text-decoration: none;
+  color: #FFFFFF;
+  position: absolute;
+  position: absolute;
+  top: -55px;
+  left: 15px;
+  width: 400px;
+  z-index: 99;
+  font-size: 24px;
+  text-shadow: 0px 1px 5px black;
 }
 /*# sourceMappingURL=styles.css.map */

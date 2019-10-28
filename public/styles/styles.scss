@@ -5,6 +5,17 @@ $grey: #999999;
 $darkGrey: #666666;
 $white: #FFFFFF;
 
+//breakpoints
+$first: 1126px;
+$mobile: 420px;
+
+@mixin to-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
@@ -34,12 +45,23 @@ header{
     align-items: center;
     flex-direction: column;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    background-color: $white;
     .container{
         width: 80%;
         display: flex;
         text-align: center;
         align-items: center;
         justify-items: space-between;
+        @media only screen and (max-width: $first){
+            width: 90%;
+        }
+        @media only screen and (max-width: $mobile){
+            width: 100%;
+        }
         .topWrapper{
             width: 100%;
             display: flex;
@@ -47,6 +69,9 @@ header{
             align-items: center;
             justify-content: space-between;
             height: 100px;
+            @media only screen and (max-width: $mobile){
+                height: 80px;
+            }
             .socialMediaIcons{
                 width: 160px;
                 text-align: left; 
@@ -70,6 +95,9 @@ header{
                     &:hover{
                         background-color: $coral;
                     }
+                    @media only screen and (max-width: $mobile){
+                        display: none;
+                    }
                 }  
             }
             .logoWrapper{
@@ -78,8 +106,10 @@ header{
                 text-align: center;
                 align-items: center;
                 .logo{
-                    
                     width: 120px;
+                }
+                @media only screen and (max-width: $mobile){
+                    float: left;
                 }
             }
             .liveBtn{
@@ -96,7 +126,6 @@ header{
         }
         
     }
-    
     .containerBottom{
         width: 100%;
         box-sizing: border-box;
@@ -114,6 +143,12 @@ header{
             align-items: center;
             font-size: 15px;
             justify-content: space-between;
+            @media only screen and (max-width: $first){
+                width: 90%;
+            }
+            @media only screen and (max-width: $mobile){
+                width: 100%;
+            }
             .leftWrap{
                 display: flex;
                 .menuDiv{
@@ -134,6 +169,9 @@ header{
                     text-align: center;
                     align-items: center;
                     justify-content: center;
+                    @media only screen and (max-width: $mobile){
+                        display: none;
+                    }
                     .navLinks{
                         display: flex;
                         text-align: center;
@@ -154,12 +192,15 @@ header{
                 }
                 
             }
-            
             .rightWrap{
                 display: flex;
                 text-align: center;
                 align-items: center;
                 float: right;
+                @media only screen and (max-width: $mobile){
+                    width: 70%;
+                    margin-left: 20px;
+                }
                 .searchInput{
                     input{
                         font-size: 15px;
@@ -184,6 +225,48 @@ header{
                     }
                 }
             }            
+        }
+    }
+}
+
+.newsWrapper{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 130px;
+    .mainWrapper{
+        width: 80%;
+        @media only screen and (max-width: $first){
+            width: 90%;
+        }
+        @media only screen and (max-width: $mobile){
+            width: 100%;
+        }
+        .mainNews{
+            .imgAnchor{
+                position: relative;
+                .newsImg{
+                    width: 440px;
+                    position: relative;
+                    margin: 10px;
+                }
+                .newsTitle{
+                    text-decoration: none;
+                    color: $white;
+                    position: absolute;
+                    position: absolute;
+                    top: -55px; 
+                    //left: 0; 
+                    left: 15px;
+                    width: 400px;
+                    z-index: 99;
+                    font-size: 24px;
+                    text-shadow: 0px 1px 5px black;
+                }
+            }
         }
     }
 }
