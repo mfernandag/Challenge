@@ -226,7 +226,7 @@ header{
     top: 130px;
     .mainWrapper{
         width: 70%;
-        @include to-center();
+        //@include to-center();
         @media only screen and (max-width: $first){
             width: 90%;
         }
@@ -255,11 +255,17 @@ header{
                     left: 15px;
                     width: 400px;
                     z-index: 99;
-                    font-size: 24px;
+                    font-size: 22px;
+                    font-weight: bold;
                     text-shadow: 0px 1px 5px black;
+                    margin-left: 10px;
+                    letter-spacing: 1px;
+                    &:hover{
+                        color: $coral;
+                    }
                     @media only screen and (max-width: $mobile){
                         top: 185px;
-                        font-size: 22px;
+                        font-size: 20px;
                     }
                 }
             }
