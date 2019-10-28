@@ -6,7 +6,7 @@ $darkGrey: #666666;
 $white: #FFFFFF;
 
 //breakpoints
-$first: 1126px;
+$first: 1126px; 
 $mobile: 420px;
 
 @mixin to-center{
@@ -15,7 +15,6 @@ $mobile: 420px;
     justify-content: center;
     text-align: center;
 }
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
@@ -61,6 +60,7 @@ header{
         }
         @media only screen and (max-width: $mobile){
             width: 100%;
+            justify-content: space-between;
         }
         .topWrapper{
             width: 100%;
@@ -71,6 +71,9 @@ header{
             height: 100px;
             @media only screen and (max-width: $mobile){
                 height: 80px;
+                width: 100%;
+                padding: 0 15px;
+                justify-content: space-between;
             }
             .socialMediaIcons{
                 width: 160px;
@@ -82,10 +85,7 @@ header{
                     text-decoration: none;
                     width: 30px;
                     height: 30px;
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    align-items: center;
+                    @include to-center();
                     border-radius: 50%;
                     line-height: 36px;
                     float: left;
@@ -101,15 +101,12 @@ header{
                 }  
             }
             .logoWrapper{
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
+                @include to-center();
                 .logo{
                     width: 120px;
                 }
                 @media only screen and (max-width: $mobile){
-                    float: left;
+                    margin-right: auto;
                 }
             }
             .liveBtn{
@@ -124,15 +121,11 @@ header{
                 text-align: center;
             }
         }
-        
     }
     .containerBottom{
         width: 100%;
         box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+        @include to-center();
         box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.15);
         .nav{
             width: 80%;
@@ -156,27 +149,18 @@ header{
                     height: 50px;
                     border-right: 1px solid $lightGrey;
                     border-left: 1px solid $lightGrey;
-                    display: flex;
-                    text-align: center;
-                    align-items: center;
-                    justify-content: center;
+                    @include to-center();
                     span{
                         font-weight: bold;
                     }
                 }
                 .linksContainer{
-                    display: flex;
-                    text-align: center;
-                    align-items: center;
-                    justify-content: center;
+                    @include to-center();
                     @media only screen and (max-width: $mobile){
                         display: none;
                     }
                     .navLinks{
-                        display: flex;
-                        text-align: center;
-                        align-items: center;
-                        justify-content: center;
+                        @include to-center();
                         a{
                             text-decoration: none;
                         }
@@ -239,6 +223,7 @@ header{
     top: 130px;
     .mainWrapper{
         width: 80%;
+        @include to-center();
         @media only screen and (max-width: $first){
             width: 90%;
         }
@@ -259,7 +244,6 @@ header{
                     position: absolute;
                     position: absolute;
                     top: -55px; 
-                    //left: 0; 
                     left: 15px;
                     width: 400px;
                     z-index: 99;

@@ -62,6 +62,9 @@ header .container {
 @media only screen and (max-width: 420px) {
   header .container {
     width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -83,6 +86,11 @@ header .container .topWrapper {
 @media only screen and (max-width: 420px) {
   header .container .topWrapper {
     height: 80px;
+    width: 100%;
+    padding: 0 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -101,13 +109,13 @@ header .container .topWrapper .socialMediaIcons .smIcon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 50%;
   line-height: 36px;
   float: left;
@@ -131,13 +139,13 @@ header .container .topWrapper .logoWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 header .container .topWrapper .logoWrapper .logo {
@@ -146,7 +154,7 @@ header .container .topWrapper .logoWrapper .logo {
 
 @media only screen and (max-width: 420px) {
   header .container .topWrapper .logoWrapper {
-    float: left;
+    margin-right: auto;
   }
 }
 
@@ -173,13 +181,13 @@ header .containerBottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.15);
 }
@@ -230,13 +238,13 @@ header .containerBottom .nav .leftWrap .menuDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 header .containerBottom .nav .leftWrap .menuDiv span {
@@ -247,13 +255,13 @@ header .containerBottom .nav .leftWrap .linksContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 420px) {
@@ -266,13 +274,13 @@ header .containerBottom .nav .leftWrap .linksContainer .navLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 header .containerBottom .nav .leftWrap .linksContainer .navLinks a {
@@ -350,6 +358,16 @@ header .containerBottom .nav .rightWrap .cienRadios .cienradiosLink:hover {
 
 .newsWrapper .mainWrapper {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1126px) {
