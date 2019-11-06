@@ -4,12 +4,13 @@
   "description": "challenge for radio Mitre",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "mkdir -p public && touch public/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mfernandag/Challenge.git"
-  },
+  },   
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,7 +20,6 @@
   "dependencies": {
     "body-parser": "1.19.0",
     "cors": "2.8.5",
-    "express": "4.17.1",
     "morgan": "1.9.1",
     "nodemon": "^1.19.4"
   }

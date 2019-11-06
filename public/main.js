@@ -20,13 +20,6 @@ fetch(endpoint)
         newsLink.appendChild(title)
         imgContainer.appendChild(newsLink)
     })
-    /*res.forEach(e => {
-        const title = document.createElement('a')
-        title.innerText = e.title
-        title.href = e.title
-        title.classList.add('newsTitle')
-        imgContainer.appendChild(title)
-    })*/
 })
 
 
