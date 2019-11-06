@@ -257,6 +257,12 @@ header .containerBottom .nav .leftWrap .menuDiv span {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 420px) {
+  header .containerBottom .nav .leftWrap .menuDiv {
+    width: 20%;
+  }
+}
+
 header .containerBottom .nav .leftWrap .linksContainer {
   display: -webkit-box;
   display: -ms-flexbox;

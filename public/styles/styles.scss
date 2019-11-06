@@ -156,6 +156,9 @@ header{
                     span{
                         font-weight: bold;
                     }
+                    @media only screen and (max-width: $mobile){
+                        width: 20%;
+                    }
                 }
                 .linksContainer{
                     @include to-center();
